@@ -17,10 +17,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        // Use Firebase library to configure APIs
         FirebaseApp.configure()
+        
+        decorateNavigationBarAppearance()
+        
+        //action based on auth status change..
+      //  redirectBasedOnAuthStatus()
+        
+        //action based on current user status..
+        if Auth.auth().currentUser != nil {
+            // user is signed in
+            self.redirectToHomeScreen()
+        }
+        else{
+            // user is not signed in
+            self.redirectToLandingScreen()
+        }
         return true
+    }
+    
+    func redirectBasedOnAuthStatus(){
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            if user != nil {
+                // user is signed in
+                self.redirectToHomeScreen()
+            } else {
+                // user is not signed in
+                self.redirectToLandingScreen()
+            }
+        }
+    }
+    
+    func redirectToLandingScreen(){
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = UINavigationController(rootViewController: LandingScreenVC(nibName: "LandingScreenVC", style: Style.landmarkRemark))
+        window?.makeKeyAndVisible()
+    }
+    
+    func redirectToHomeScreen(){
+        print("redirectToHomeScreen")
+    }
+    
+    func decorateNavigationBarAppearance() {
+        UINavigationBar.appearance().barTintColor = UIColor.landmarkRemarkTheme
+        UINavigationBar.appearance().tintColor = UIColor.black
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
