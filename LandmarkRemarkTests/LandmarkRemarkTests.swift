@@ -35,4 +35,12 @@ class LandmarkRemarkTests: XCTestCase {
         XCTAssertFalse(Utilities.isPasswordValid(password))
     }
 
+    func testButtonStyling(){
+        let style = Style.landmarkRemark
+        let button = UIButton(type: .custom)
+        style.apply(to: button)
+        XCTAssertTrue(button.backgroundColor!.isEqual(UIColor.landmarkRemarkTheme))
+        XCTAssertFalse((button.titleLabel?.textColor.isEqual(UIColor.landmarkRemarkTheme))!)
+    }
+
 }
