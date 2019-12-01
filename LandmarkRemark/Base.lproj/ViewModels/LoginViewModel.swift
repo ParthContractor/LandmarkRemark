@@ -25,7 +25,7 @@ class LoginViewModel {
     }
     
     // Check if all textfields are filled and validate input.
-    private func validateTextFields(email: String?, password: String?) -> String? {
+     func validateTextFields(email: String?, password: String?) -> String? {
         // Check that all fields are filled in
         if  email?.trimmingCharacters(in: .whitespacesAndNewlines) == String() ||
             password?.trimmingCharacters(in: .whitespacesAndNewlines) == String() {

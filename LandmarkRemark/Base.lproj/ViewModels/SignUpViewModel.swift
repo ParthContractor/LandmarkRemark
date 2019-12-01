@@ -27,7 +27,7 @@ class SignUpViewModel {
     }
     
     // Check if all textfields are filled and validate input.
-    private func validateTextFields(username: String?, email: String?, password: String?) -> String? {
+     func validateTextFields(username: String?, email: String?, password: String?) -> String? {
         // Check that all fields are filled in
         if  username?.trimmingCharacters(in: .whitespacesAndNewlines) == String() ||
             email?.trimmingCharacters(in: .whitespacesAndNewlines) == String() ||

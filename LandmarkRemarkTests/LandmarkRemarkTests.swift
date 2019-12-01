@@ -42,5 +42,40 @@ class LandmarkRemarkTests: XCTestCase {
         XCTAssertTrue(button.backgroundColor!.isEqual(UIColor.landmarkRemarkTheme))
         XCTAssertFalse((button.titleLabel?.textColor.isEqual(UIColor.landmarkRemarkTheme))!)
     }
+    
+    func testUserAlreadyExistsCheckWhileSignUp(){
+        let viewModel = SignUpViewModel()
+        XCTAssertNil(viewModel.error)
+        let exp = expectation(description: "signUp")
+        viewModel.createUser(username: "puc2", email: "puc2@yopmail.com", password: "puc2yopmail@", completionHandler: {
+            exp.fulfill()
+        })
+        waitForExpectations(timeout: 7)
+        XCTAssertNotNil(viewModel.error)
+    }
+    
+    func testLoginValidateTextFields(){
+        let viewModel = LoginViewModel()
+        viewModel.error = viewModel.validateTextFields(email: "jh", password: "kjkj")
+        XCTAssertEqual("Please enter valid email.", viewModel.error)
+    }
+    
+    func testLoginWithRightCredentials(){
+        let viewModel = LoginViewModel()
+        XCTAssertNil(viewModel.error)
+        let exp = expectation(description: "login")
+        viewModel.login(email: "puc2@yopmail.com", password: "puc2yopmail@", completionHandler: {
+            exp.fulfill()
+        })
+        waitForExpectations(timeout: 9)
+        XCTAssertNil(viewModel.error)
+    }
+    
+    func testLandingScreenViewModel(){
+        let viewModel = LandingScreenViewModel()
+        XCTAssertEqual("Landmark Remark", viewModel.navigationBarTitle)
+        XCTAssertEqual("Sign Up", viewModel.signUpButtonTitle)
+        XCTAssertEqual("Login", viewModel.loginButtonTitle)
+    }
 
 }
