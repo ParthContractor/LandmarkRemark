@@ -21,9 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         decorateNavigationBarAppearance()
         
-        //action based on auth status change..
-      //  redirectBasedOnAuthStatus()
-        
         //action based on current user status..
         if Auth.auth().currentUser != nil {
             // user is signed in
@@ -35,19 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return true
     }
-    
-//    func redirectBasedOnAuthStatus(){
-//        Auth.auth().addStateDidChangeListener { (auth, user) in
-//            if user != nil {
-//                // user is signed in
-//                self.redirectToHomeScreen()
-//            } else {
-//                // user is not signed in
-//                self.redirectToLandingScreen()
-//            }
-//        }
-//    }
-    
+        
     func redirectToLandingScreen(){
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = UINavigationController(rootViewController: LandingScreenVC(nibName: "LandingScreenVC", style: Style.landmarkRemark))
