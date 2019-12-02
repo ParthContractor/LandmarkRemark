@@ -58,6 +58,7 @@ class LoginViewModel {
             }
             else {
                 // Redirect to the home screen
+                print("welcome \(String(describing: Auth.auth().currentUser?.displayName))")
                 self.error = nil
                 completionHandler()
             }

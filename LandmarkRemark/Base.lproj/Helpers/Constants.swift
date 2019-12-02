@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+struct AppConstants {
+    static let firestore_notes_collection_name = "LandmarkNotes"
+}

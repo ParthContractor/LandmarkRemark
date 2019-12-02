@@ -36,17 +36,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func redirectBasedOnAuthStatus(){
-        Auth.auth().addStateDidChangeListener { (auth, user) in
-            if user != nil {
-                // user is signed in
-                self.redirectToHomeScreen()
-            } else {
-                // user is not signed in
-                self.redirectToLandingScreen()
-            }
-        }
-    }
+//    func redirectBasedOnAuthStatus(){
+//        Auth.auth().addStateDidChangeListener { (auth, user) in
+//            if user != nil {
+//                // user is signed in
+//                self.redirectToHomeScreen()
+//            } else {
+//                // user is not signed in
+//                self.redirectToLandingScreen()
+//            }
+//        }
+//    }
     
     func redirectToLandingScreen(){
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -56,6 +56,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func redirectToHomeScreen(){
         print("redirectToHomeScreen")
+//        let newDocument = db.collection("testCollection1").document()
+//        Utilities.filterDocumentsWithFieldValue(fieldName: "username", fieldValue: "puc5", completionHandler: {(error, filteredDataDictArray) in
+//            
+//            if error == nil {
+//                print("docs \(filteredDataDictArray)")
+//            }
+//            
+//        })
     }
     
     func decorateNavigationBarAppearance() {

@@ -63,16 +63,17 @@ class SignUpViewModel {
                 completionHandler()
             }
             else {
-                // User was created successfully, now store the first name and last name
-                let db = Firestore.firestore()
-                db.collection("users").addDocument(data: ["username":username!,"uid": result!.user.uid ]) { (error) in
-                    
-                    if error != nil {
-                        // No error handling for this because we do not have UI/req for user rofile update for now; assuming user details(e.e username will be associated with this user in firestore)
+                // User was created successfully, now store the username
+                let user = result!.user
+                let request = user.createProfileChangeRequest()
+                request.displayName = username
+                request.commitChanges(completion: { (error) in
+                    if error == nil {
+                        print("welcome \(String(describing: Auth.auth().currentUser?.displayName))")
                     }
-                }
-                self.error = nil
-                completionHandler()
+                    self.error = nil
+                    completionHandler()
+                })
             }
         }
     }

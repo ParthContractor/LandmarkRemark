@@ -10,6 +10,7 @@
 		71CB4959B3807C13EA5F2AAB /* Pods_LandmarkRemark_LandmarkRemarkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669CC9508536AE13923B769A /* Pods_LandmarkRemark_LandmarkRemarkUITests.framework */; };
 		8280350E76A30586464B6119 /* Pods_LandmarkRemark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92808EEA82107C9C799F052C /* Pods_LandmarkRemark.framework */; };
 		93B8727D1D73EB339541449B /* Pods_LandmarkRemarkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52B47D551CAE873FC773ADA /* Pods_LandmarkRemarkTests.framework */; };
+		B28E9FAC2394ECD500D21AD5 /* Utilities+Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E9FAB2394ECD500D21AD5 /* Utilities+Firestore.swift */; };
 		B2A9643923928CE600326AA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A9643823928CE600326AA3 /* AppDelegate.swift */; };
 		B2A9644023928CE700326AA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2A9643F23928CE700326AA3 /* Assets.xcassets */; };
 		B2A9644323928CE700326AA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A9644123928CE700326AA3 /* LaunchScreen.storyboard */; };
@@ -57,6 +58,7 @@
 		8BE045918C3366176044153D /* Pods-LandmarkRemarkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LandmarkRemarkTests.debug.xcconfig"; path = "Target Support Files/Pods-LandmarkRemarkTests/Pods-LandmarkRemarkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		92808EEA82107C9C799F052C /* Pods_LandmarkRemark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LandmarkRemark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97D27FFB637B87FCD11915E8 /* Pods-LandmarkRemarkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LandmarkRemarkTests.release.xcconfig"; path = "Target Support Files/Pods-LandmarkRemarkTests/Pods-LandmarkRemarkTests.release.xcconfig"; sourceTree = "<group>"; };
+		B28E9FAB2394ECD500D21AD5 /* Utilities+Firestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utilities+Firestore.swift"; sourceTree = "<group>"; };
 		B2A9643523928CE600326AA3 /* LandmarkRemark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandmarkRemark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A9643823928CE600326AA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2A9643F23928CE700326AA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				B2E94A5023934D060000B1E3 /* Style.swift */,
 				B2E94A5223934FE60000B1E3 /* Style+LandmarkRemark.swift */,
 				B2E94A4C2392BCE30000B1E3 /* Utilities.swift */,
+				B28E9FAB2394ECD500D21AD5 /* Utilities+Firestore.swift */,
 				B2E23B0A2392B62E0099628A /* UIImageExtension.swift */,
 				B2E23B0D2392B6300099628A /* UIViewControllerExtension.swift */,
 			);
@@ -487,6 +490,7 @@
 			files = (
 				B2E94A4F2392BCE40000B1E3 /* Constants.swift in Sources */,
 				B2E23B122392B6300099628A /* UIViewControllerExtension.swift in Sources */,
+				B28E9FAC2394ECD500D21AD5 /* Utilities+Firestore.swift in Sources */,
 				B2E23B042392B4B30099628A /* LandingScreenVC.swift in Sources */,
 				B2E23B0F2392B6300099628A /* UIImageExtension.swift in Sources */,
 				B2E94A5723939E0B0000B1E3 /* SignUpViewModel.swift in Sources */,
