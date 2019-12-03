@@ -56,7 +56,8 @@ class LoginVC: UIViewController {
     }
     
     private func redirectToHomeScreen() {
-        self.presentAlert(withTitle: "Success", message: "redirectToHomeScreen")
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.redirectToHomeScreen()
     }
     
     private func handleError() {

@@ -48,6 +48,7 @@ class LoginViewModel {
         if let errorString = validateTextFields(email: email, password: password){
             error = errorString
             completionHandler()
+            return
         }
         // Signing in the user
         Auth.auth().signIn(withEmail: email!, password: password!) { (result, error) in

@@ -60,7 +60,8 @@ class SignUpVC: UIViewController {
     
     private func redirectToHomeScreen() {
         if viewModel.error == nil {
-            self.presentAlert(withTitle: "Success", message: "redirectToHomeScreen")
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.redirectToHomeScreen()
         }
     }
     

@@ -21,4 +21,10 @@ class Utilities {
         return emailTest.evaluate(with: email)
     }
     
+    static func isValidUsername(_ username : String) -> Bool {
+        if username.count > 10 {
+            return false
+        }
+        return true
+    }
 }

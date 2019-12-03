@@ -10,11 +10,11 @@ import XCTest
 @testable import LandmarkRemark
 
 class LandmarkRemarkTests: XCTestCase {
-    let uid = "95Iv97xaa5eVKyDclfJ9UYN3YRC2"
-    let username = "puc5"
-    let remark = "beautiful lake"
-    let latitude = 32.0763
-    let longitude = 155.9877
+    let uid = "ydbzVi1GDwUq9REI6QvuErbHGKa2"
+    let username = "puc4"
+    let remark = "best hotel with sea view(near bondi beach)"
+    let latitude = 31.0869
+    let longitude = 152.0977
     let testCollection = "testCollection1"
     let testDocumentIDToUpdate = "4k2KdKhpua77S6oPsWVm"
 

@@ -10,6 +10,17 @@
 		71CB4959B3807C13EA5F2AAB /* Pods_LandmarkRemark_LandmarkRemarkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669CC9508536AE13923B769A /* Pods_LandmarkRemark_LandmarkRemarkUITests.framework */; };
 		8280350E76A30586464B6119 /* Pods_LandmarkRemark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92808EEA82107C9C799F052C /* Pods_LandmarkRemark.framework */; };
 		93B8727D1D73EB339541449B /* Pods_LandmarkRemarkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52B47D551CAE873FC773ADA /* Pods_LandmarkRemarkTests.framework */; };
+		B250A7852395DDE7005532E7 /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250A7832395DDE7005532E7 /* HomeScreenVC.swift */; };
+		B250A7862395DDE7005532E7 /* HomeScreenVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B250A7842395DDE7005532E7 /* HomeScreenVC.xib */; };
+		B250A78823960BDE005532E7 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250A78723960BDE005532E7 /* HomeScreenViewModel.swift */; };
+		B250A78A23961329005532E7 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250A78923961329005532E7 /* LocationManager.swift */; };
+		B250A78C23969076005532E7 /* Blacktown_Sydney.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B250A78B23969076005532E7 /* Blacktown_Sydney.gpx */; };
+		B250A79123969406005532E7 /* Penrith_Sydney.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B250A790239693BD005532E7 /* Penrith_Sydney.gpx */; };
+		B250A79223969409005532E7 /* Paramatta_Sydney.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B250A78F2396935F005532E7 /* Paramatta_Sydney.gpx */; };
+		B250A7932396940C005532E7 /* Westmead_Sydney.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B250A78E23969126005532E7 /* Westmead_Sydney.gpx */; };
+		B250A7942396940F005532E7 /* Wynyard_Sydney.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B250A78D239690F3005532E7 /* Wynyard_Sydney.gpx */; };
+		B250A79723969E53005532E7 /* UserAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250A79623969E53005532E7 /* UserAnnotation.swift */; };
+		B250A7992396B06F005532E7 /* LandmarkRemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250A7982396B06F005532E7 /* LandmarkRemark.swift */; };
 		B28E9FAC2394ECD500D21AD5 /* Utilities+Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E9FAB2394ECD500D21AD5 /* Utilities+Firestore.swift */; };
 		B2A9643923928CE600326AA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A9643823928CE600326AA3 /* AppDelegate.swift */; };
 		B2A9644023928CE700326AA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2A9643F23928CE700326AA3 /* Assets.xcassets */; };
@@ -58,6 +69,17 @@
 		8BE045918C3366176044153D /* Pods-LandmarkRemarkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LandmarkRemarkTests.debug.xcconfig"; path = "Target Support Files/Pods-LandmarkRemarkTests/Pods-LandmarkRemarkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		92808EEA82107C9C799F052C /* Pods_LandmarkRemark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LandmarkRemark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97D27FFB637B87FCD11915E8 /* Pods-LandmarkRemarkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LandmarkRemarkTests.release.xcconfig"; path = "Target Support Files/Pods-LandmarkRemarkTests/Pods-LandmarkRemarkTests.release.xcconfig"; sourceTree = "<group>"; };
+		B250A7832395DDE7005532E7 /* HomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
+		B250A7842395DDE7005532E7 /* HomeScreenVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreenVC.xib; sourceTree = "<group>"; };
+		B250A78723960BDE005532E7 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
+		B250A78923961329005532E7 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		B250A78B23969076005532E7 /* Blacktown_Sydney.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Blacktown_Sydney.gpx; sourceTree = "<group>"; };
+		B250A78D239690F3005532E7 /* Wynyard_Sydney.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Wynyard_Sydney.gpx; sourceTree = "<group>"; };
+		B250A78E23969126005532E7 /* Westmead_Sydney.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Westmead_Sydney.gpx; sourceTree = "<group>"; };
+		B250A78F2396935F005532E7 /* Paramatta_Sydney.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Paramatta_Sydney.gpx; sourceTree = "<group>"; };
+		B250A790239693BD005532E7 /* Penrith_Sydney.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Penrith_Sydney.gpx; sourceTree = "<group>"; };
+		B250A79623969E53005532E7 /* UserAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAnnotation.swift; sourceTree = "<group>"; };
+		B250A7982396B06F005532E7 /* LandmarkRemark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRemark.swift; sourceTree = "<group>"; };
 		B28E9FAB2394ECD500D21AD5 /* Utilities+Firestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utilities+Firestore.swift"; sourceTree = "<group>"; };
 		B2A9643523928CE600326AA3 /* LandmarkRemark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandmarkRemark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A9643823928CE600326AA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +151,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B250A79523969451005532E7 /* GPX_Files */ = {
+			isa = PBXGroup;
+			children = (
+				B250A78B23969076005532E7 /* Blacktown_Sydney.gpx */,
+				B250A78D239690F3005532E7 /* Wynyard_Sydney.gpx */,
+				B250A78E23969126005532E7 /* Westmead_Sydney.gpx */,
+				B250A78F2396935F005532E7 /* Paramatta_Sydney.gpx */,
+				B250A790239693BD005532E7 /* Penrith_Sydney.gpx */,
+			);
+			name = GPX_Files;
+			path = Base.lproj/GPX_Files;
+			sourceTree = "<group>";
+		};
 		B2A9642C23928CE600326AA3 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				B2A9643823928CE600326AA3 /* AppDelegate.swift */,
+				B250A79523969451005532E7 /* GPX_Files */,
 				B2E23AF92392AAB90099628A /* Helpers */,
 				B2E23AFA2392AAB90099628A /* Model */,
 				B2E23AFC2392AAB90099628A /* View */,
@@ -195,6 +231,8 @@
 				B28E9FAB2394ECD500D21AD5 /* Utilities+Firestore.swift */,
 				B2E23B0A2392B62E0099628A /* UIImageExtension.swift */,
 				B2E23B0D2392B6300099628A /* UIViewControllerExtension.swift */,
+				B250A78923961329005532E7 /* LocationManager.swift */,
+				B250A79623969E53005532E7 /* UserAnnotation.swift */,
 			);
 			name = Helpers;
 			path = Base.lproj/Helpers;
@@ -203,6 +241,7 @@
 		B2E23AFA2392AAB90099628A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B250A7982396B06F005532E7 /* LandmarkRemark.swift */,
 			);
 			name = Model;
 			path = Base.lproj/Model;
@@ -214,6 +253,7 @@
 				B2E94A5423936D610000B1E3 /* LandingScreenViewModel.swift */,
 				B2E94A5623939E0B0000B1E3 /* SignUpViewModel.swift */,
 				B2E94A5C2393A7800000B1E3 /* LoginViewModel.swift */,
+				B250A78723960BDE005532E7 /* HomeScreenViewModel.swift */,
 			);
 			name = ViewModels;
 			path = Base.lproj/ViewModels;
@@ -228,6 +268,8 @@
 				B2E23B012392B4B20099628A /* SignUpVC.xib */,
 				B2E94A592393A6A50000B1E3 /* LoginVC.swift */,
 				B2E94A582393A6A40000B1E3 /* LoginVC.xib */,
+				B250A7832395DDE7005532E7 /* HomeScreenVC.swift */,
+				B250A7842395DDE7005532E7 /* HomeScreenVC.xib */,
 			);
 			name = View;
 			path = Base.lproj/View;
@@ -355,11 +397,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B250A7942396940F005532E7 /* Wynyard_Sydney.gpx in Resources */,
 				B2E94A5A2393A6A50000B1E3 /* LoginVC.xib in Resources */,
+				B250A79223969409005532E7 /* Paramatta_Sydney.gpx in Resources */,
 				B2A9644323928CE700326AA3 /* LaunchScreen.storyboard in Resources */,
 				B2E23B072392B4B30099628A /* SignUpVC.xib in Resources */,
 				B2A964672392977200326AA3 /* GoogleService-Info.plist in Resources */,
 				B2A9644023928CE700326AA3 /* Assets.xcassets in Resources */,
+				B250A79123969406005532E7 /* Penrith_Sydney.gpx in Resources */,
+				B250A78C23969076005532E7 /* Blacktown_Sydney.gpx in Resources */,
+				B250A7932396940C005532E7 /* Westmead_Sydney.gpx in Resources */,
+				B250A7862395DDE7005532E7 /* HomeScreenVC.xib in Resources */,
 				B2E23B032392B4B30099628A /* LandingScreenVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,13 +537,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2E94A4F2392BCE40000B1E3 /* Constants.swift in Sources */,
+				B250A78A23961329005532E7 /* LocationManager.swift in Sources */,
 				B2E23B122392B6300099628A /* UIViewControllerExtension.swift in Sources */,
+				B250A79723969E53005532E7 /* UserAnnotation.swift in Sources */,
 				B28E9FAC2394ECD500D21AD5 /* Utilities+Firestore.swift in Sources */,
 				B2E23B042392B4B30099628A /* LandingScreenVC.swift in Sources */,
 				B2E23B0F2392B6300099628A /* UIImageExtension.swift in Sources */,
 				B2E94A5723939E0B0000B1E3 /* SignUpViewModel.swift in Sources */,
 				B2E94A5D2393A7800000B1E3 /* LoginViewModel.swift in Sources */,
 				B2E94A5123934D070000B1E3 /* Style.swift in Sources */,
+				B250A7852395DDE7005532E7 /* HomeScreenVC.swift in Sources */,
+				B250A7992396B06F005532E7 /* LandmarkRemark.swift in Sources */,
+				B250A78823960BDE005532E7 /* HomeScreenViewModel.swift in Sources */,
 				B2E23B082392B4B30099628A /* SignUpVC.swift in Sources */,
 				B2A9643923928CE600326AA3 /* AppDelegate.swift in Sources */,
 				B2E94A5B2393A6A50000B1E3 /* LoginVC.swift in Sources */,

@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -40,15 +41,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func redirectToHomeScreen(){
-        print("redirectToHomeScreen")
-//        let newDocument = db.collection("testCollection1").document()
-//        Utilities.filterDocumentsWithFieldValue(fieldName: "username", fieldValue: "puc5", completionHandler: {(error, filteredDataDictArray) in
-//            
-//            if error == nil {
-//                print("docs \(filteredDataDictArray)")
-//            }
-//            
-//        })
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let locationProvider = CLLocationManager()
+        let locationManager = LocationManager(with: locationProvider)
+        locationProvider.delegate = locationManager
+        let viewModel = HomeScreenViewModel(locationProvider: locationManager)
+        window?.rootViewController = UINavigationController(rootViewController: HomeScreenVC(nibName: "HomeScreenVC", style: Style.landmarkRemark, viewModel: viewModel))
+        window?.makeKeyAndVisible()
     }
     
     func decorateNavigationBarAppearance() {

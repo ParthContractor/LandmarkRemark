@@ -34,7 +34,9 @@ class SignUpViewModel {
             password?.trimmingCharacters(in: .whitespacesAndNewlines) == String() {
             return "Please fill all fields."
         }
-        
+        if Utilities.isValidUsername(username!) == false {
+            return "Username cannot be greater than 10 characters."
+        }
         if Utilities.isValidEmailID(email!) == false {
             return "Please enter valid email."
         }
@@ -52,6 +54,7 @@ class SignUpViewModel {
         if let errorString = validateTextFields(username: username, email: email, password: password){
             error = errorString
             completionHandler()
+            return
         }
         // Create the user
         Auth.auth().createUser(withEmail: email!, password: password!) { (result, err) in
