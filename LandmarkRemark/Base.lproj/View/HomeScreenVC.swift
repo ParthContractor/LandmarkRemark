@@ -83,6 +83,43 @@ class HomeScreenVC: UIViewController, MKMapViewDelegate {
     
     @objc private func createNote() {
         requestUserLocation()
+        let alert = UIAlertController(title: "Enter remark for this landmark/place.", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        alert.addTextField(configurationHandler: { textField in
+            textField.placeholder = "Enter your remark here.."
+        })
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            if let remark = alert.textFields?.first?.text {
+                self.showLoadingIndicator(onView: self.view)
+                self.viewModel.createLandmarkRemark(text: remark, completion: { (landmarkRemark) in
+                    DispatchQueue.main.async {
+                        //update UI
+                        self.removeLoadingIndicator()
+                        if let errorMessage = self.viewModel.error {
+                            self.presentAlert(withTitle: "Error", message: errorMessage)
+                        }
+                        else{
+                            //Add nealy created annotation to map...
+                            self.addAnnotation(landmarkRemark!)
+                        }
+                    }
+                })
+            }
+        }))
+        
+        self.present(alert, animated: true)
+    }
+    
+    private func addAnnotation(_ remark: LandmarkRemark) {
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = Coordinate(latitude: remark.latitude, longitude: remark.longitude)
+        annotation.title = remark.username
+        annotation.subtitle = remark.remark
+        DispatchQueue.main.async {
+            self.mapView.addAnnotation(annotation)
+        }
     }
     
     private func executeLogout() {
@@ -129,19 +166,11 @@ class HomeScreenVC: UIViewController, MKMapViewDelegate {
     }
     
     private func setUpAllLandmarkRemarksInMap() {
-        
         viewModel.getAllLandmarkRemarks {
             for remark in self.viewModel.allLandmarkRemarksArray {
-                let annotation = MKPointAnnotation()
-                annotation.coordinate = Coordinate(latitude: remark.latitude, longitude: remark.longitude)
-                    annotation.title = remark.username
-                    annotation.subtitle = remark.remark
-                DispatchQueue.main.async {
-                    self.mapView.addAnnotation(annotation)
-                }
+                self.addAnnotation(remark)
             }
         }
-        
     }
     
     // MARK: - mapView methods

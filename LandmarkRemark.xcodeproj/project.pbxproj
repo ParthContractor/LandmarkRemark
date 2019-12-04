@@ -21,6 +21,7 @@
 		B250A7942396940F005532E7 /* Wynyard_Sydney.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B250A78D239690F3005532E7 /* Wynyard_Sydney.gpx */; };
 		B250A79723969E53005532E7 /* UserAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250A79623969E53005532E7 /* UserAnnotation.swift */; };
 		B250A7992396B06F005532E7 /* LandmarkRemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250A7982396B06F005532E7 /* LandmarkRemark.swift */; };
+		B250A79B2397D768005532E7 /* EncodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250A79A2397D767005532E7 /* EncodableExtension.swift */; };
 		B28E9FAC2394ECD500D21AD5 /* Utilities+Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E9FAB2394ECD500D21AD5 /* Utilities+Firestore.swift */; };
 		B2A9643923928CE600326AA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A9643823928CE600326AA3 /* AppDelegate.swift */; };
 		B2A9644023928CE700326AA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2A9643F23928CE700326AA3 /* Assets.xcassets */; };
@@ -79,6 +80,7 @@
 		B250A790239693BD005532E7 /* Penrith_Sydney.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Penrith_Sydney.gpx; sourceTree = "<group>"; };
 		B250A79623969E53005532E7 /* UserAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAnnotation.swift; sourceTree = "<group>"; };
 		B250A7982396B06F005532E7 /* LandmarkRemark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRemark.swift; sourceTree = "<group>"; };
+		B250A79A2397D767005532E7 /* EncodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtension.swift; sourceTree = "<group>"; };
 		B28E9FAB2394ECD500D21AD5 /* Utilities+Firestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utilities+Firestore.swift"; sourceTree = "<group>"; };
 		B2A9643523928CE600326AA3 /* LandmarkRemark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandmarkRemark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A9643823928CE600326AA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				B2E23B0D2392B6300099628A /* UIViewControllerExtension.swift */,
 				B250A78923961329005532E7 /* LocationManager.swift */,
 				B250A79623969E53005532E7 /* UserAnnotation.swift */,
+				B250A79A2397D767005532E7 /* EncodableExtension.swift */,
 			);
 			name = Helpers;
 			path = Base.lproj/Helpers;
@@ -545,6 +548,7 @@
 				B250A7852395DDE7005532E7 /* HomeScreenVC.swift in Sources */,
 				B250A7992396B06F005532E7 /* LandmarkRemark.swift in Sources */,
 				B250A78823960BDE005532E7 /* HomeScreenViewModel.swift in Sources */,
+				B250A79B2397D768005532E7 /* EncodableExtension.swift in Sources */,
 				B2E23B082392B4B30099628A /* SignUpVC.swift in Sources */,
 				B2A9643923928CE600326AA3 /* AppDelegate.swift in Sources */,
 				B2E94A5B2393A6A50000B1E3 /* LoginVC.swift in Sources */,

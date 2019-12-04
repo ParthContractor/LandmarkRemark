@@ -8,10 +8,12 @@
 
 import Foundation
 
-public struct LandmarkRemark: Codable {
+public struct LandmarkRemark {
     let uid: String
     let username: String
     let remark: String
     let latitude: Double
     let longitude: Double
 }
+
+extension LandmarkRemark: Codable {} // preserves memberwise initializer
