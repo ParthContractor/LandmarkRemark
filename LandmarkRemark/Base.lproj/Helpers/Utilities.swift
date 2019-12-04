@@ -27,4 +27,10 @@ class Utilities {
         }
         return true
     }
+    
+    static func ifUserNameAlreadyExists(_ username : String, completion: @escaping (_ exists:Bool ) -> Void) {
+        Utilities.filterDocumentsWithFieldValue(fieldName: "username", fieldValue: username, completionHandler: { (err, arr) in
+            completion(arr.count != 0)
+        })
+    }
 }

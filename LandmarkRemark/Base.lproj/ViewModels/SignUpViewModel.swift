@@ -34,9 +34,11 @@ class SignUpViewModel {
             password?.trimmingCharacters(in: .whitespacesAndNewlines) == String() {
             return "Please fill all fields."
         }
+        
         if Utilities.isValidUsername(username!) == false {
             return "Username cannot be greater than 10 characters."
         }
+        
         if Utilities.isValidEmailID(email!) == false {
             return "Please enter valid email."
         }
@@ -56,28 +58,43 @@ class SignUpViewModel {
             completionHandler()
             return
         }
-        // Create the user
-        Auth.auth().createUser(withEmail: email!, password: password!) { (result, err) in
-            
-            // Check for errors
-            if err != nil {
-                // There was an error creating the user
-                self.error = err?.localizedDescription ?? "There was an error while user registration"
+        
+        let group = DispatchGroup()
+        DispatchQueue.global().async {
+        group.enter()
+        Utilities.ifUserNameAlreadyExists(username!, completion: {(exists) in
+            if exists {
+                self.error = "Username already exists."
                 completionHandler()
             }
-            else {
-                // User was created successfully, now store the username
-                let user = result!.user
-                let request = user.createProfileChangeRequest()
-                request.displayName = username
-                request.commitChanges(completion: { (error) in
-                    if error == nil {
-                        print("welcome \(String(describing: Auth.auth().currentUser?.displayName))")
+            else{
+                // Create the user
+                Auth.auth().createUser(withEmail: email!, password: password!) { (result, err) in
+                    
+                    // Check for errors
+                    if err != nil {
+                        // There was an error creating the user
+                        self.error = err?.localizedDescription ?? "There was an error while user registration"
+                        completionHandler()
                     }
-                    self.error = nil
-                    completionHandler()
-                })
+                    else {
+                        // User was created successfully, now store the username
+                        let user = result!.user
+                        let request = user.createProfileChangeRequest()
+                        request.displayName = username
+                        request.commitChanges(completion: { (error) in
+                            if error == nil {
+                                print("welcome \(String(describing: Auth.auth().currentUser?.displayName))")
+                            }
+                            self.error = nil
+                            completionHandler()
+                        })
+                    }
+                }
             }
+            group.leave()
+        })
+        group.wait()
         }
     }
     

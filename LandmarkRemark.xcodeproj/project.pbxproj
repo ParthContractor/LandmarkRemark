@@ -32,7 +32,6 @@
 		B2E23B042392B4B30099628A /* LandingScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E23AFE2392B4B10099628A /* LandingScreenVC.swift */; };
 		B2E23B072392B4B30099628A /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2E23B012392B4B20099628A /* SignUpVC.xib */; };
 		B2E23B082392B4B30099628A /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E23B022392B4B30099628A /* SignUpVC.swift */; };
-		B2E23B0F2392B6300099628A /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E23B0A2392B62E0099628A /* UIImageExtension.swift */; };
 		B2E23B122392B6300099628A /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E23B0D2392B6300099628A /* UIViewControllerExtension.swift */; };
 		B2E94A4E2392BCE40000B1E3 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E94A4C2392BCE30000B1E3 /* Utilities.swift */; };
 		B2E94A4F2392BCE40000B1E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E94A4D2392BCE30000B1E3 /* Constants.swift */; };
@@ -97,7 +96,6 @@
 		B2E23AFE2392B4B10099628A /* LandingScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingScreenVC.swift; sourceTree = "<group>"; };
 		B2E23B012392B4B20099628A /* SignUpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpVC.xib; sourceTree = "<group>"; };
 		B2E23B022392B4B30099628A /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
-		B2E23B0A2392B62E0099628A /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		B2E23B0D2392B6300099628A /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		B2E94A4C2392BCE30000B1E3 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		B2E94A4D2392BCE30000B1E3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -229,7 +227,6 @@
 				B2E94A5223934FE60000B1E3 /* Style+LandmarkRemark.swift */,
 				B2E94A4C2392BCE30000B1E3 /* Utilities.swift */,
 				B28E9FAB2394ECD500D21AD5 /* Utilities+Firestore.swift */,
-				B2E23B0A2392B62E0099628A /* UIImageExtension.swift */,
 				B2E23B0D2392B6300099628A /* UIViewControllerExtension.swift */,
 				B250A78923961329005532E7 /* LocationManager.swift */,
 				B250A79623969E53005532E7 /* UserAnnotation.swift */,
@@ -542,7 +539,6 @@
 				B250A79723969E53005532E7 /* UserAnnotation.swift in Sources */,
 				B28E9FAC2394ECD500D21AD5 /* Utilities+Firestore.swift in Sources */,
 				B2E23B042392B4B30099628A /* LandingScreenVC.swift in Sources */,
-				B2E23B0F2392B6300099628A /* UIImageExtension.swift in Sources */,
 				B2E94A5723939E0B0000B1E3 /* SignUpViewModel.swift in Sources */,
 				B2E94A5D2393A7800000B1E3 /* LoginViewModel.swift in Sources */,
 				B2E94A5123934D070000B1E3 /* Style.swift in Sources */,
