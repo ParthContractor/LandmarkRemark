@@ -8,7 +8,6 @@
 
 import UIKit
 import MapKit
-import Firebase
 
 class HomeScreenVC: UIViewController, MKMapViewDelegate {
 
@@ -66,17 +65,33 @@ class HomeScreenVC: UIViewController, MKMapViewDelegate {
     }
     
     @objc private func logOut() {
-        do {
-            try Auth.auth().signOut()
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.redirectToLandingScreen()
-        } catch let error {
-            self.presentAlert(withTitle: "Error", message: "\(error.localizedDescription)")
+        
+        let dialogMessage = UIAlertController(title: "LandmarkRemark", message: "Are you sure you want to Logout?", preferredStyle: .alert)
+        
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            self.executeLogout()
+        })
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
         }
+        
+        dialogMessage.addAction(ok)
+        dialogMessage.addAction(cancel)
+        
+        present(dialogMessage, animated: true, completion: nil)
     }
     
     @objc private func createNote() {
         requestUserLocation()
+    }
+    
+    private func executeLogout() {
+        viewModel.executeLogout {
+            if self.viewModel.error == nil {
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.redirectToLandingScreen()
+            }
+        }
     }
 
     private func requestUserLocation() {

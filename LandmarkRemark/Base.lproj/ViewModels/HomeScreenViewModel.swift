@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 class HomeScreenViewModel {
     let navigationBarTitle: String
@@ -15,6 +16,8 @@ class HomeScreenViewModel {
     var userLocation: UserLocation?
 
     var allLandmarkRemarksArray = [LandmarkRemark]()
+
+    var error: String?
 
     init(locationProvider: UserLocationProvider) {
         self.navigationBarTitle = "Landmark Remark"
@@ -34,5 +37,16 @@ class HomeScreenViewModel {
                 completion()
             }
         })
+    }
+    
+    func executeLogout(completion: @escaping () -> Void) {
+        error = nil
+        do {
+            try Auth.auth().signOut()
+            completion()
+        } catch let error {
+            self.error = "\(error.localizedDescription)"
+            completion()
+        }
     }
 }
