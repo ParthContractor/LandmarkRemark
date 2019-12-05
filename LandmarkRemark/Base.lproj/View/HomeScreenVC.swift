@@ -79,6 +79,10 @@ class HomeScreenVC: UIViewController, MKMapViewDelegate {
     }
     
     @objc private func refreshCurrentLocation() {
+        if Utilities.locationPermissionCheck() == false {
+            self.presentAlert(withTitle: "Error", message: "Location Service is required to add remark at current location. Please provide necessary access.")
+            return
+        }
         requestUserLocation()
     }
     
@@ -100,6 +104,10 @@ class HomeScreenVC: UIViewController, MKMapViewDelegate {
     }
     
     @objc private func createNote() {
+        if Utilities.locationPermissionCheck() == false {
+            self.presentAlert(withTitle: "Error", message: "Location Service is required to add remark at current location. Please provide necessary access.")
+            return
+        }
         requestUserLocation()
         let alert = UIAlertController(title: "Enter remark for this landmark/place.", message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))

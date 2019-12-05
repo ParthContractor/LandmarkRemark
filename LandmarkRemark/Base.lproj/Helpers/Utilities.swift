@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 class Utilities {
     
@@ -32,5 +33,22 @@ class Utilities {
         Utilities.filterDocumentsWithFieldValue(fieldName: "username", fieldValue: username, completionHandler: { (err, arr) in
             completion(arr.count != 0)
         })
+    }
+    
+    static func locationPermissionCheck() -> Bool {
+        var permissionFlag = false
+        if CLLocationManager.locationServicesEnabled() {
+            switch CLLocationManager.authorizationStatus() {
+            case .notDetermined, .restricted, .denied:
+                permissionFlag = false
+            case .authorizedWhenInUse:
+                permissionFlag = true
+            case .authorizedAlways:
+                permissionFlag = false
+            }
+        } else {
+            print("Location services are not enabled")
+        }
+        return permissionFlag
     }
 }

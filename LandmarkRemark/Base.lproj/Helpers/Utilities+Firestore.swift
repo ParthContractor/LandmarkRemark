@@ -9,6 +9,7 @@
 import Foundation
 import Firebase
 
+//Utility methods of CRUD operations of firestore
 extension Utilities {
     static let firestoreDB = Firestore.firestore()
     
