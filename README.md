@@ -74,7 +74,7 @@ Source code must be developed and runnable in XCode 10.
   * ViewControllers and viewModel programming: 9 hours
   * Readme/Documentation and video recording: 1 hour
 * User Interface and Application Demo link
-  * cccdds
+  * https://we.tl/t-wEAOIpD84W
 * Limitations/known issues
   * Firestore limitation for querying/searching contained text for any field(it only supports exact keyword match for now)
   * Because of cloud firestore's limitation, I had to fetch all landmark remark records and serach filter remark keywords records locally (using swift higher order function)
