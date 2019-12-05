@@ -24,7 +24,7 @@ class LoginViewModel {
         self.passwordTextFieldPlaceHolder = "Password"
     }
     
-    // Check if all textfields are filled and validate input.
+    // MARK: - Required textfield validations
      func validateTextFields(email: String?, password: String?) -> String? {
         // Check that all fields are filled in
         if  email?.trimmingCharacters(in: .whitespacesAndNewlines) == String() ||
@@ -43,6 +43,7 @@ class LoginViewModel {
         return nil
     }
     
+    // MARK: - Login service call
     func login(email: String?, password: String?, completionHandler: @escaping () -> Void) {
         error = nil
         if let errorString = validateTextFields(email: email, password: password){
@@ -59,8 +60,7 @@ class LoginViewModel {
             }
             else {
                 // Redirect to the home screen
-                print("welcome \(String(describing: Auth.auth().currentUser?.displayName))")
-                self.error = nil
+                self.error = nil//no need to handle error because, user is created however only display name is not inserted with associated user..
                 completionHandler()
             }
         }

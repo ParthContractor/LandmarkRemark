@@ -26,7 +26,7 @@ class SignUpViewModel {
         self.passwordTextFieldPlaceHolder = "Password*"
     }
     
-    // Check if all textfields are filled and validate input.
+    // MARK: - Required textfield validations
      func validateTextFields(username: String?, email: String?, password: String?) -> String? {
         // Check that all fields are filled in
         if  username?.trimmingCharacters(in: .whitespacesAndNewlines) == String() ||
@@ -50,6 +50,7 @@ class SignUpViewModel {
         return nil
     }
     
+    // MARK: - Create user service call follwed by commit display name
     func createUser(username: String?, email: String?, password: String?, completionHandler: @escaping () -> Void) {
         error = nil
         
@@ -82,11 +83,8 @@ class SignUpViewModel {
                         let user = result!.user
                         let request = user.createProfileChangeRequest()
                         request.displayName = username
-                        request.commitChanges(completion: { (error) in
-                            if error == nil {
-                                print("welcome \(String(describing: Auth.auth().currentUser?.displayName))")
-                            }
-                            self.error = nil
+                        request.commitChanges(completion: { (err) in
+                            self.error = nil//no need to handle error because, user is created however only display name is not inserted with associated user..
                             completionHandler()
                         })
                     }

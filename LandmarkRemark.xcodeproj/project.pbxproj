@@ -26,6 +26,11 @@
 		B250A7A12398749A005532E7 /* LandmarkListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B250A79F2398749A005532E7 /* LandmarkListVC.xib */; };
 		B250A7A523987ED1005532E7 /* LandmarkListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250A7A423987ED1005532E7 /* LandmarkListViewModel.swift */; };
 		B250A7A7239883A4005532E7 /* LandmarkRemarkListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250A7A6239883A4005532E7 /* LandmarkRemarkListCell.swift */; };
+		B2757B0C2398C4BE0064B765 /* Airport_Sydney.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B2757B0B2398C4BE0064B765 /* Airport_Sydney.gpx */; };
+		B2757B0E2398C52C0064B765 /* OperaHouse_Sydney.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B2757B0D2398C52C0064B765 /* OperaHouse_Sydney.gpx */; };
+		B2757B102398C56E0064B765 /* BondiBeach_Sydney.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B2757B0F2398C56E0064B765 /* BondiBeach_Sydney.gpx */; };
+		B2757B122398C5D10064B765 /* Parliament_Canberra.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B2757B112398C5D10064B765 /* Parliament_Canberra.gpx */; };
+		B2757B142398CDB10064B765 /* RemarkAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2757B132398CDB10064B765 /* RemarkAnnotation.swift */; };
 		B28E9FAC2394ECD500D21AD5 /* Utilities+Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E9FAB2394ECD500D21AD5 /* Utilities+Firestore.swift */; };
 		B2A9643923928CE600326AA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A9643823928CE600326AA3 /* AppDelegate.swift */; };
 		B2A9644023928CE700326AA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2A9643F23928CE700326AA3 /* Assets.xcassets */; };
@@ -89,6 +94,11 @@
 		B250A79F2398749A005532E7 /* LandmarkListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LandmarkListVC.xib; sourceTree = "<group>"; };
 		B250A7A423987ED1005532E7 /* LandmarkListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkListViewModel.swift; sourceTree = "<group>"; };
 		B250A7A6239883A4005532E7 /* LandmarkRemarkListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRemarkListCell.swift; sourceTree = "<group>"; };
+		B2757B0B2398C4BE0064B765 /* Airport_Sydney.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Airport_Sydney.gpx; sourceTree = "<group>"; };
+		B2757B0D2398C52C0064B765 /* OperaHouse_Sydney.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = OperaHouse_Sydney.gpx; sourceTree = "<group>"; };
+		B2757B0F2398C56E0064B765 /* BondiBeach_Sydney.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BondiBeach_Sydney.gpx; sourceTree = "<group>"; };
+		B2757B112398C5D10064B765 /* Parliament_Canberra.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Parliament_Canberra.gpx; sourceTree = "<group>"; };
+		B2757B132398CDB10064B765 /* RemarkAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemarkAnnotation.swift; sourceTree = "<group>"; };
 		B28E9FAB2394ECD500D21AD5 /* Utilities+Firestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utilities+Firestore.swift"; sourceTree = "<group>"; };
 		B2A9643523928CE600326AA3 /* LandmarkRemark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandmarkRemark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A9643823928CE600326AA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +177,10 @@
 				B250A78E23969126005532E7 /* Westmead_Sydney.gpx */,
 				B250A78F2396935F005532E7 /* Paramatta_Sydney.gpx */,
 				B250A790239693BD005532E7 /* Penrith_Sydney.gpx */,
+				B2757B0B2398C4BE0064B765 /* Airport_Sydney.gpx */,
+				B2757B0D2398C52C0064B765 /* OperaHouse_Sydney.gpx */,
+				B2757B0F2398C56E0064B765 /* BondiBeach_Sydney.gpx */,
+				B2757B112398C5D10064B765 /* Parliament_Canberra.gpx */,
 			);
 			name = GPX_Files;
 			path = Base.lproj/GPX_Files;
@@ -240,6 +254,7 @@
 				B2E23B0D2392B6300099628A /* UIViewControllerExtension.swift */,
 				B250A78923961329005532E7 /* LocationManager.swift */,
 				B250A79623969E53005532E7 /* UserAnnotation.swift */,
+				B2757B132398CDB10064B765 /* RemarkAnnotation.swift */,
 				B250A79A2397D767005532E7 /* EncodableExtension.swift */,
 			);
 			name = Helpers;
@@ -412,6 +427,7 @@
 				B250A7942396940F005532E7 /* Wynyard_Sydney.gpx in Resources */,
 				B250A7A12398749A005532E7 /* LandmarkListVC.xib in Resources */,
 				B2E94A5A2393A6A50000B1E3 /* LoginVC.xib in Resources */,
+				B2757B0C2398C4BE0064B765 /* Airport_Sydney.gpx in Resources */,
 				B250A79223969409005532E7 /* Paramatta_Sydney.gpx in Resources */,
 				B2A9644323928CE700326AA3 /* LaunchScreen.storyboard in Resources */,
 				B2E23B072392B4B30099628A /* SignUpVC.xib in Resources */,
@@ -420,7 +436,10 @@
 				B250A79123969406005532E7 /* Penrith_Sydney.gpx in Resources */,
 				B250A78C23969076005532E7 /* Blacktown_Sydney.gpx in Resources */,
 				B250A7932396940C005532E7 /* Westmead_Sydney.gpx in Resources */,
+				B2757B102398C56E0064B765 /* BondiBeach_Sydney.gpx in Resources */,
 				B250A7862395DDE7005532E7 /* HomeScreenVC.xib in Resources */,
+				B2757B0E2398C52C0064B765 /* OperaHouse_Sydney.gpx in Resources */,
+				B2757B122398C5D10064B765 /* Parliament_Canberra.gpx in Resources */,
 				B2E23B032392B4B30099628A /* LandingScreenVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,6 +580,7 @@
 				B2E94A5723939E0B0000B1E3 /* SignUpViewModel.swift in Sources */,
 				B2E94A5D2393A7800000B1E3 /* LoginViewModel.swift in Sources */,
 				B2E94A5123934D070000B1E3 /* Style.swift in Sources */,
+				B2757B142398CDB10064B765 /* RemarkAnnotation.swift in Sources */,
 				B250A7852395DDE7005532E7 /* HomeScreenVC.swift in Sources */,
 				B250A7992396B06F005532E7 /* LandmarkRemark.swift in Sources */,
 				B250A78823960BDE005532E7 /* HomeScreenViewModel.swift in Sources */,

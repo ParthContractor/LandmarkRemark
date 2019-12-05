@@ -40,7 +40,7 @@ class LandmarkListVC: UIViewController {
     
     // MARK: - Helper methods
     private func applyStyle() {
-        tableView.register(LandmarkRemarkListCell.self, forCellReuseIdentifier: "LandmarkListCellIdentifier")
+        tableView.register(LandmarkRemarkListCell.self, forCellReuseIdentifier: LandmarkRemarkListCell.cellIdentifier)
         view.backgroundColor = style.backgroundColor
     }
     
@@ -95,7 +95,7 @@ extension LandmarkListVC : UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LandmarkListCellIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: LandmarkRemarkListCell.cellIdentifier, for: indexPath)
         let landmarkRemark = viewModel.filteredLandmarkRemark[indexPath.row]
         cell.textLabel?.numberOfLines = 1
         cell.detailTextLabel?.numberOfLines = 0

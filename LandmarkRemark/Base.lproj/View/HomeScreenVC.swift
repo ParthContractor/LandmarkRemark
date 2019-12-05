@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Firebase
 
 class HomeScreenVC: UIViewController, MKMapViewDelegate {
 
@@ -130,10 +131,18 @@ class HomeScreenVC: UIViewController, MKMapViewDelegate {
     }
     
     private func addAnnotation(_ remark: LandmarkRemark) {
-        let annotation = MKPointAnnotation()
+        let annotation = RemarkAnnotation()
         annotation.coordinate = Coordinate(latitude: remark.latitude, longitude: remark.longitude)
         annotation.title = remark.username
         annotation.subtitle = remark.remark
+        
+        //Different color for identifying user's remarks vs others in mapview..
+        if let loggedInUser = Auth.auth().currentUser, remark.uid == loggedInUser.uid{
+            annotation.tintColor = .green
+        }
+        else {
+            annotation.tintColor = .blue
+        }
         DispatchQueue.main.async {
             self.mapView.addAnnotation(annotation)
         }
@@ -213,10 +222,14 @@ class HomeScreenVC: UIViewController, MKMapViewDelegate {
             
             let btn = UIButton(type: .detailDisclosure)
             annotationView!.rightCalloutAccessoryView = btn
+            
         } else {
             annotationView!.annotation = annotation
         }
-
+        
+        if annotation is RemarkAnnotation {
+            (annotationView as! MKPinAnnotationView).pinTintColor = (annotation as! RemarkAnnotation).tintColor
+        }
         return annotationView
     }
     

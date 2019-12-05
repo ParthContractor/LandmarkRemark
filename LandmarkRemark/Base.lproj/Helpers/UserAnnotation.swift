@@ -8,6 +8,7 @@
 
 import MapKit
 
+//This annotation is specifically for current location of user
 class UserAnnotation : NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
     var title: String?

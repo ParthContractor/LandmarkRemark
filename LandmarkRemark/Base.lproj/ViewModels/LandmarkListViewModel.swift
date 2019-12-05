@@ -20,13 +20,13 @@ class LandmarkListViewModel {
     init() {
         self.navigationBarTitle = "Landmark Remark"
         self.searchBarPlaceHolder = "Search landmark by username or remark.."
-        self.getAllLandmarkRemarks()
+        self.getAllLandmarkRemarks()//This will be needed to search remark text and filter landmark remarks containing the same.
     }
     
     func searchLandmarkRemarks(text: String, completion: @escaping () -> Void) {
         filteredLandmarkRemark.removeAll()
        
-        //first search for username and then contained text...
+        //Firstly search for username and then contained text...
         Utilities.filterDocumentsWithFieldValue(fieldName: AppConstants.usernameKey, fieldValue: text, completionHandler: {(err, arrayOfDicts) in
             self.error = err?.localizedDescription
             if arrayOfDicts.count != 0 {
@@ -47,7 +47,7 @@ class LandmarkListViewModel {
         })
     }
     
-    //TODO: To be changed(currently firestore does not provide support for text search). Because of the firestore limitation, for now, we will get all landmark remarks and search within that locally...
+    //TODO: To be changed in future(currently firestore does not provide support for text search). Because of the firestore limitation, for now, we will get all landmark remarks in array and search within that locally using swift filter function...
     private func searchLandmarkRemarksWithContainedText(text: String) -> Void {
         filteredLandmarkRemark = allLandMarkRemarks.filter {
             ($0.remark.lowercased().contains(text.lowercased()))

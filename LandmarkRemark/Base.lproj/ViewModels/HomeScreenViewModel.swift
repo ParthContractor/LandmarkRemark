@@ -24,6 +24,7 @@ class HomeScreenViewModel {
         self.locationProvider = locationProvider
     }
     
+    // MARK: - get all LandmarkRemarks for adding annotations in mapview
     func getAllLandmarkRemarks(completion: @escaping () -> Void) {
         allLandmarkRemarksArray.removeAll()
         Utilities.getAllDocuments(completionHandler: {(error,arrayOfDicts) in
@@ -39,6 +40,7 @@ class HomeScreenViewModel {
         })
     }
     
+    // MARK: - logout service call
     func executeLogout(completion: @escaping () -> Void) {
         error = nil
         do {
@@ -50,6 +52,7 @@ class HomeScreenViewModel {
         }
     }
     
+    // MARK: - create LandmarkRemark service call
     func createLandmarkRemark(text:String, completion: @escaping (_ landmarkRemark:LandmarkRemark?) -> Void) {
         if let uid = Auth.auth().currentUser?.uid, let currentLocation = userLocation, text.count != 0  {
             let remark = LandmarkRemark.init(ID:nil, uid: uid, username: Auth.auth().currentUser?.displayName ?? "", remark: text, latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)

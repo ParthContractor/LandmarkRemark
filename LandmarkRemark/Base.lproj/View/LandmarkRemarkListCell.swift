@@ -9,7 +9,7 @@
 import UIKit
 
 class LandmarkRemarkListCell: UITableViewCell {
-    
+    static let cellIdentifier = "LandmarkListCellIdentifier"
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
         let style = Style.landmarkRemark

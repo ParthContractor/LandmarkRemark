@@ -17,5 +17,4 @@ struct AppConstants {
     static let longitudeKey = "longitude"
     
     static let genericErrorMessage = "Something went wrong.."
-
 }
