@@ -66,7 +66,8 @@ extension Utilities {
                 var arryToReturn = Array<[String : Any]>()
                 if error == nil && snapshot != nil {
                     for document in snapshot!.documents {
-                        let dataDict = document.data()
+                        var dataDict = document.data()
+                        dataDict["ID"] = document.documentID
                         arryToReturn.append(dataDict)
                     }
                 }

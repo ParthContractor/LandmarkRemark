@@ -22,6 +22,10 @@
 		B250A79723969E53005532E7 /* UserAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250A79623969E53005532E7 /* UserAnnotation.swift */; };
 		B250A7992396B06F005532E7 /* LandmarkRemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250A7982396B06F005532E7 /* LandmarkRemark.swift */; };
 		B250A79B2397D768005532E7 /* EncodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250A79A2397D767005532E7 /* EncodableExtension.swift */; };
+		B250A7A02398749A005532E7 /* LandmarkListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250A79E2398749A005532E7 /* LandmarkListVC.swift */; };
+		B250A7A12398749A005532E7 /* LandmarkListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B250A79F2398749A005532E7 /* LandmarkListVC.xib */; };
+		B250A7A523987ED1005532E7 /* LandmarkListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250A7A423987ED1005532E7 /* LandmarkListViewModel.swift */; };
+		B250A7A7239883A4005532E7 /* LandmarkRemarkListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250A7A6239883A4005532E7 /* LandmarkRemarkListCell.swift */; };
 		B28E9FAC2394ECD500D21AD5 /* Utilities+Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E9FAB2394ECD500D21AD5 /* Utilities+Firestore.swift */; };
 		B2A9643923928CE600326AA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A9643823928CE600326AA3 /* AppDelegate.swift */; };
 		B2A9644023928CE700326AA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2A9643F23928CE700326AA3 /* Assets.xcassets */; };
@@ -81,6 +85,10 @@
 		B250A79623969E53005532E7 /* UserAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAnnotation.swift; sourceTree = "<group>"; };
 		B250A7982396B06F005532E7 /* LandmarkRemark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRemark.swift; sourceTree = "<group>"; };
 		B250A79A2397D767005532E7 /* EncodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtension.swift; sourceTree = "<group>"; };
+		B250A79E2398749A005532E7 /* LandmarkListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkListVC.swift; sourceTree = "<group>"; };
+		B250A79F2398749A005532E7 /* LandmarkListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LandmarkListVC.xib; sourceTree = "<group>"; };
+		B250A7A423987ED1005532E7 /* LandmarkListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkListViewModel.swift; sourceTree = "<group>"; };
+		B250A7A6239883A4005532E7 /* LandmarkRemarkListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRemarkListCell.swift; sourceTree = "<group>"; };
 		B28E9FAB2394ECD500D21AD5 /* Utilities+Firestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utilities+Firestore.swift"; sourceTree = "<group>"; };
 		B2A9643523928CE600326AA3 /* LandmarkRemark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandmarkRemark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A9643823928CE600326AA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -254,6 +262,7 @@
 				B2E94A5623939E0B0000B1E3 /* SignUpViewModel.swift */,
 				B2E94A5C2393A7800000B1E3 /* LoginViewModel.swift */,
 				B250A78723960BDE005532E7 /* HomeScreenViewModel.swift */,
+				B250A7A423987ED1005532E7 /* LandmarkListViewModel.swift */,
 			);
 			name = ViewModels;
 			path = Base.lproj/ViewModels;
@@ -270,6 +279,9 @@
 				B2E94A582393A6A40000B1E3 /* LoginVC.xib */,
 				B250A7832395DDE7005532E7 /* HomeScreenVC.swift */,
 				B250A7842395DDE7005532E7 /* HomeScreenVC.xib */,
+				B250A79E2398749A005532E7 /* LandmarkListVC.swift */,
+				B250A7A6239883A4005532E7 /* LandmarkRemarkListCell.swift */,
+				B250A79F2398749A005532E7 /* LandmarkListVC.xib */,
 			);
 			name = View;
 			path = Base.lproj/View;
@@ -398,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B250A7942396940F005532E7 /* Wynyard_Sydney.gpx in Resources */,
+				B250A7A12398749A005532E7 /* LandmarkListVC.xib in Resources */,
 				B2E94A5A2393A6A50000B1E3 /* LoginVC.xib in Resources */,
 				B250A79223969409005532E7 /* Paramatta_Sydney.gpx in Resources */,
 				B2A9644323928CE700326AA3 /* LaunchScreen.storyboard in Resources */,
@@ -537,8 +550,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2E94A4F2392BCE40000B1E3 /* Constants.swift in Sources */,
+				B250A7A7239883A4005532E7 /* LandmarkRemarkListCell.swift in Sources */,
 				B250A78A23961329005532E7 /* LocationManager.swift in Sources */,
+				B250A7A02398749A005532E7 /* LandmarkListVC.swift in Sources */,
 				B2E23B122392B6300099628A /* UIViewControllerExtension.swift in Sources */,
+				B250A7A523987ED1005532E7 /* LandmarkListViewModel.swift in Sources */,
 				B250A79723969E53005532E7 /* UserAnnotation.swift in Sources */,
 				B28E9FAC2394ECD500D21AD5 /* Utilities+Firestore.swift in Sources */,
 				B2E23B042392B4B30099628A /* LandingScreenVC.swift in Sources */,

@@ -47,7 +47,11 @@ class HomeScreenVC: UIViewController, MKMapViewDelegate {
         let refreshButton = UIBarButtonItem(barButtonSystemItem:
             UIBarButtonItem.SystemItem.refresh, target: self, action:
             #selector(refreshCurrentLocation))
-        navigationItem.leftBarButtonItem  = refreshButton
+        let searchButton = UIBarButtonItem(barButtonSystemItem:
+            UIBarButtonItem.SystemItem.search, target: self, action:
+            #selector(searchButtonTapped))
+
+        navigationItem.leftBarButtonItems  = [refreshButton, searchButton]
         let createNoteButton = UIBarButtonItem(barButtonSystemItem:
             UIBarButtonItem.SystemItem.compose, target: self, action:
             #selector(createNote))
@@ -55,9 +59,22 @@ class HomeScreenVC: UIViewController, MKMapViewDelegate {
         let logOutButton = UIBarButtonItem(image: UIImage.init(named: "Logout"), style: .plain, target: self, action: #selector(logOut))
         navigationItem.rightBarButtonItems = [createNoteButton, logOutButton]
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
 
     private func applyStyle() {
         view.backgroundColor = style.backgroundColor
+    }
+    
+    @objc private func searchButtonTapped() {
+        let landmarkListVC = LandmarkListVC(nibName: "LandmarkListVC", style: .landmarkRemark)
+        landmarkListVC.landmarkSelection = { selectedRemark in
+            self.setUpSelectedLandmarkRemarkInMap(selectedRemark)
+        }
+        self.navigationController?.pushViewController(landmarkListVC, animated:true)
     }
     
     @objc private func refreshCurrentLocation() {
@@ -162,6 +179,15 @@ class HomeScreenVC: UIViewController, MKMapViewDelegate {
             DispatchQueue.main.async {
                 self.mapView.addAnnotation(annotation)
             }
+        }
+    }
+    
+    private func setUpSelectedLandmarkRemarkInMap(_ remark: LandmarkRemark) {
+        let span = MKCoordinateSpan(latitudeDelta: 1.0, longitudeDelta: 1.0)
+        let coordinate = CLLocationCoordinate2D(latitude: remark.latitude, longitude: remark.longitude)
+        let region = MKCoordinateRegion(center: coordinate, span: span)
+        DispatchQueue.main.async {
+            self.mapView.setRegion(region, animated: true)
         }
     }
     

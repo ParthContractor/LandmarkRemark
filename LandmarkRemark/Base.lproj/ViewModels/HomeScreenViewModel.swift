@@ -52,8 +52,9 @@ class HomeScreenViewModel {
     
     func createLandmarkRemark(text:String, completion: @escaping (_ landmarkRemark:LandmarkRemark?) -> Void) {
         if let uid = Auth.auth().currentUser?.uid, let currentLocation = userLocation, text.count != 0  {
-            let remark = LandmarkRemark.init(uid: uid, username: Auth.auth().currentUser?.displayName ?? "", remark: text, latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
-            let remark_dict = remark.dictionary
+            let remark = LandmarkRemark.init(ID:nil, uid: uid, username: Auth.auth().currentUser?.displayName ?? "", remark: text, latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
+            var remark_dict = remark.dictionary
+            remark_dict?.removeValue(forKey: "ID")
             if let dict = remark_dict {
                 Utilities.createDocument(dictionaryData: dict, completionHandler: { (err) in
                     self.error = err?.localizedDescription

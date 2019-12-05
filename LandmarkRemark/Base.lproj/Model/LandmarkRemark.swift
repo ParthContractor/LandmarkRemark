@@ -9,6 +9,7 @@
 import Foundation
 
 public struct LandmarkRemark {
+    let ID: String?
     let uid: String
     let username: String
     let remark: String
