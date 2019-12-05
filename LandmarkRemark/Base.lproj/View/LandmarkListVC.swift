@@ -64,7 +64,6 @@ extension LandmarkListVC: UISearchBarDelegate {
         if (strText ).isEmpty {
             return
         } else {
-            self.showLoadingIndicator(onView: self.view)
             DispatchQueue.main.async {
                 self.viewModel.filteredLandmarkRemark.removeAll()
                 self.searchLandmarks(strText)
@@ -73,6 +72,7 @@ extension LandmarkListVC: UISearchBarDelegate {
     }
     
     func searchLandmarks(_ searchText: String) {
+        self.showLoadingIndicator(onView: self.view)
         viewModel.searchLandmarkRemarks(text: searchText, completion: {() in
             self.tableView.reloadData()
             self.removeLoadingIndicator()
