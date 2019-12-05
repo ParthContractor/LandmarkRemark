@@ -74,14 +74,14 @@ Source code must be developed and runnable in XCode 10.
   * ViewControllers and viewModel programming: 9 hours
   * Readme/Documentation and video recording: 1 hour
 * User Interface and Application Demo link
-  * No CACHING OR LOCAL STORAGE required
-  * No higher order functions should be used for sorting/grouping rather relying on SpaceX API directly
+  * cccdds
 * Limitations/known issues
-  * No CACHING OR LOCAL STORAGE required
-  * No higher order functions should be used for sorting/grouping rather relying on SpaceX API directly
+  * Firestore limitation for querying/searching contained text for any field(it only supports exact keyword match for now)
+  * Because of cloud firestore's limitation, I had to fetch all landmark remark records and serach filter remark keywords records locally (using swift higher order function)
 * Future scalability/requirements/features possibility/Scope of improvements
-  * No CACHING OR LOCAL STORAGE required
-  * No higher order functions should be used for sorting/grouping rather relying on SpaceX API directly
+  * Delete and edit note option for user's own landmark remarks(back-end and required helper methods already in place; only UI could be added/modified if we need to add this functionality)
+  * Display all records of landmark remarks in list view with possible differentiation of user's notes vs othe in seperate screen
+  * Rather than relying upon third party BAAS, In-house backend development/server setup and possible/efficient web services development(including proper pagination) provided application scales in future with more users and landmark remark registration in application.
 * Approach overview
   * No CACHING OR LOCAL STORAGE required
   * No higher order functions should be used for sorting/grouping rather relying on SpaceX API directly
