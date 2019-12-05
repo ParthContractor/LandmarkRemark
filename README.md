@@ -50,6 +50,7 @@ Source code must be developed and runnable in XCode 10.
   * It is ok to rely on GPX files for location simulation in simulators
 * Implicit Requirements Identified
   * Authentication is necessary for the app to function properly and securely
+  * Username must be unique
   * Back end persistence is required for landmark remarks to be stored by users.
   * Login, Signup, Already logged in check and Logout should be added.
   * Application theme/style(common code, color, font etc specific to controls or screens) must be added for better user experience
@@ -63,9 +64,15 @@ Source code must be developed and runnable in XCode 10.
   * A user should be able tap and read full remark in alert if it's truncated due to annotation/map user experience limitation.
   * A user should be able to see other landmarks even if he has denied location service usage for the application(for example, user is only interested in seeing other landmark remarks and not interested in creating/adding his own)  
   * A user should be able to zoom in/out and explore full map to see all landmark remarks within application.
-* Time
-  * No CACHING OR LOCAL STORAGE required
-  * No higher order functions should be used for sorting/grouping rather relying on SpaceX API directly
+  * A user should be able search landmark remark and on selection redirected to map to see the same region/location.
+* Approximate time estimation and efforts involved for this application development
+  * BAAS selection and setup: 2 hours
+  * Application architecture setup and planning: 2 hours
+  * Application reusable(and independent) components/classes/methods and basic utility setup: 5 hours
+  * Unit test case writing: 2 hours
+  * User interface flow and design: 4 hours
+  * ViewControllers and viewModel programming: 9 hours
+  * Readme/Documentation and video recording: 1 hour
 * User Interface and Application Demo link
   * No CACHING OR LOCAL STORAGE required
   * No higher order functions should be used for sorting/grouping rather relying on SpaceX API directly
