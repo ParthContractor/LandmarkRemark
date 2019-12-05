@@ -71,7 +71,7 @@ Source code must be developed and runnable in XCode 10.
   * Application reusable(and independent) components/classes/methods and basic utility setup: 5 hours
   * Unit test case writing: 2 hours
   * User interface flow and design: 4 hours
-  * ViewControllers and viewModel programming: 9 hours
+  * ViewControllers and viewModel programming: 10 hours
   * Readme/Documentation and video recording: 1 hour
 * User Interface and Application Demo link
   * https://we.tl/t-wEAOIpD84W
