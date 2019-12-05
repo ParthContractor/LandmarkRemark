@@ -77,6 +77,7 @@ Source code must be developed and runnable in XCode 10.
   * Link to download video(expires in 7 days): https://we.tl/t-wEAOIpD84W
   * Youtube link: https://youtu.be/BvISA4aCTV8
 * Limitations/known issues
+  * Firestore SDK build time(takes noticeable amount of time)
   * Transition from login or signup to home screen needs improvement(known thing)
   * Firestore limitation for querying/searching contained text for any field(it only supports exact keyword match for now)
   * Because of cloud firestore's limitation, I had to fetch all landmark remark records and serach filter remark keywords records locally (using swift higher order function)
