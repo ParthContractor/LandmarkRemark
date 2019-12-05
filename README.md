@@ -83,13 +83,16 @@ Source code must be developed and runnable in XCode 10.
   * Display all records of landmark remarks in list view with possible differentiation of user's notes vs othe in seperate screen
   * Rather than relying upon third party BAAS, In-house backend development/server setup and possible/efficient web services development(including proper pagination) provided application scales in future with more users and landmark remark registration in application.
 * Approach overview
-  * No CACHING OR LOCAL STORAGE required
-  * No higher order functions should be used for sorting/grouping rather relying on SpaceX API directly
+  * Stick to MVP first with possibility of scaling slowly/periodically.
+  * Write modular and maintainable code with proper architecture, standard practices and documentation.
+  * Have basic code coverage and write more rtest cases and have automated test suite ready before deployment(considering timeline and priority including sense of business impact/urgency).
 * Demo accounts if one do not wants to register as new user and use existing users
-1. As a user (of the application) I can see my current location on a map
-  * No higher order functions should be used for sorting/grouping rather relying on SpaceX API directly
-2. As a user (of the application) I can see my current location on a map
-  * No higher order functions should be used for sorting/grouping rather relying on SpaceX API directly
+1. puc5@yopmail.com
+  * puc5yopmail@
+2. cont1@yopmail.com
+  * cont1yopmail@
+3. cont2@yopmail.com
+  * cont2yopmail@
 
 
 
