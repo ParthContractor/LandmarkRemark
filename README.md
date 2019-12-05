@@ -86,6 +86,7 @@ Source code must be developed and runnable in XCode 10.
   * Display all records of landmark remarks in list view with possible differentiation of user's notes vs othe in seperate screen
   * Rather than relying upon third party BAAS, In-house backend development/server setup and possible/efficient web services development(including proper pagination) provided application scales in future with more users and landmark remark registration in application.
 * Approach overview
+  * Why Firestore? : Google is heading towards it and backing it like never before. Cloud Firestore is the next generation of Cloud Datastore(claimed by many experts and while ago it came out of beta hence having lot of potential )Also, it is 3rd generation of Cloud Datastore
   * Stick to MVP first with possibility of scaling slowly/periodically.
   * Write modular and maintainable code with proper architecture, standard practices and documentation.
   * Have basic code coverage and write more rtest cases and have automated test suite ready before deployment(considering timeline and priority including sense of business impact/urgency).
